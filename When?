@@ -1,0 +1,11 @@
+import time
+
+def second(N):
+    hour, min = N//60+21, N%60
+    if (hour)>24:
+        return time.strftime("%d:%02d" % (hour-24, min))
+    else:
+        return time.strftime("%d:%02d" % (hour, min))
+    
+N = int(input())
+print(second(N))
